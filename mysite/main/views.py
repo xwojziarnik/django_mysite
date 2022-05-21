@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def index(response):
     return HttpResponse("Hello on my index site.")
+
+def v1(response):
+    return HttpResponse("View number 1")
