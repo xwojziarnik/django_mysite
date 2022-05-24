@@ -1,10 +1,18 @@
 {% extends 'main/base.html' %}
 
 {% block title %}
-Hello!
+Index
 {% endblock %}
 
 {% block content %}
-<p>Index template</p>
-<p>{{name}}</p>
+    <h1>{{list_view.name}}</h1>
+    <ul>
+        {% for item in list_view.item_set.all %}
+            {% if item.complete == True %}
+                <li>{{item.text}} - COMPLETE</li>
+            {% else %}
+                <li>{{item.text}} - INCOMPLETE</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 {% endblock %}
