@@ -24,9 +24,9 @@ I want to:
 
 ## Features
 
-- [ ] Listing ,
-- [ ] CRUD on vehicles registered in Poland,
-- [ ] CRUD on driving licences registered in Poland,
+- [x] Listing tasks in to-do list,
+- [x] Creating to-do lists,
+- [x] Creating tasks in to-do lists,
 
 ## Technologies & Documentation
 
@@ -34,18 +34,7 @@ I want to:
 - [Django](https://docs.djangoproject.com/en/4.0/)
 - [SQLite 3](https://www.sqlite.org/docs.html)
 - [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
-
-## Team
-
-<details>
-<summary>Click to get links and say hi on LinkedIn!</summary>
-
-- [Dawid Gapiński](https://www.linkedin.com/in/dgapinski)
-- [Łukasz Kacik](https://www.linkedin.com/in/%C5%82ukasz-kacik-093691224/)
-- [Patryk Skonieczny](https://www.linkedin.com/in/pskonieczny33/)
-- [Wojciech Ziarnik](https://www.linkedin.com/in/wojciech-ziarnik-23ba971a1)
-
-</details>
+- [Django-Crispy-Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
 
 ## Installation
 
@@ -158,72 +147,7 @@ Perfect! Now, it's time to last episode.
 We've seen how to run venv. Keep that running!
 
 <details>
-<summary>Now, we can create new project and apps in our project, like this:</summary>
-
-```
-django-admin startproject <project_name> .      # Pro-tip: write a dot in the end of the command to create project IN CURRENT directory. Otherwise Django will create subdirectory and then will create project files in subdirectory.
-```
-
-Let's check what upper command created:
-
-```
-Desktop/
-    <directory_name>/
-        <virtualenv_name>
-        manage.py
-        <project_name>/
-            __init__.py
-            settings.py
-            urls.py
-            asgi.py
-            wsgi.py
-```
-
-Now all we need is our first app. So we have to type command:
-
-```
-python3 manage.py startapp <app_name>       # on MacOS
-python manage.py startapp <app_name>        # on Windows
-```
-
-Now, our scheme of files looks something like below:
-
-```
-Desktop/
-    <directory_name>/
-        <virtualenv_name>
-        manage.py
-        <project_name>/
-            __init__.py
-            settings.py
-            urls.py
-            asgi.py
-            wsgi.py
-        <app_name>/
-            __init__.py
-            admin.py
-            apps.py
-            migrations/
-                __init__.py
-            models.py
-            tests.py
-            views.py
-```
-
-Now, you can check if everything is correct. In this case:
-
-- check if you are in right directory (the same, where manage.py exists)
-- type command:
-
-```
-python3 manage.py runserver     # using MacOS
-python manage.py runserver      # using Windows
-```
-
-</details>
-
-<details>
-<summary>.. or we can simply clone this repo, and see if it's working on our machine (in case we did everything above count creating virtualenv):</summary>
+<summary>Simply clone this repo, and see if it's working on our machine (in case we did everything above count creating virtualenv):</summary>
 
 ```
 git init                                                # to initialize repository
